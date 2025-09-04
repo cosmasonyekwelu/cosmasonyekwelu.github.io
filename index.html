@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Cosmas Onyekwelu  Full-Stack Developer</title>
+  <title>Cosmas Onyekwelu — Full-Stack Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Cosmas Onyekwelu — full-stack developer building clean, scalable products (MERN, Node.js, trading dashboards, CRM). Projects, CV, and contact." />
   <meta name="theme-color" content="#0b0b0c" />
@@ -11,7 +11,7 @@
 
   <!-- Open Graph / Twitter -->
   <meta property="og:site_name" content="Cosmas Onyekwelu" />
-  <meta property="og:title" content="Cosmas Onyekwelu  Full-Stack Developer" />
+  <meta property="og:title" content="Cosmas Onyekwelu — Full-Stack Developer" />
   <meta property="og:description" content="Projects, CV, and contact. Modern web apps (MERN), CRM systems, and trading tools." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cosmasonyekwelu.github.io/" />
@@ -280,11 +280,18 @@
       line-height: 1.1; 
       margin: 0 0 1.5rem; 
       letter-spacing: -0.03em;
-      background: linear-gradient(135deg, var(--text) 0%, var(--accent-2) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--text); /* Solid color instead of gradient for better readability */
       font-weight: 800;
+    }
+
+    /* Gradient text for larger screens only */
+    @media (min-width: 769px) {
+      .hero-copy h1 {
+        background: linear-gradient(135deg, var(--text) 0%, var(--accent-2) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
     }
 
     .hero-copy p { 
@@ -695,6 +702,14 @@
       }
     }
 
+    @media (max-width: 768px) {
+      .hero-copy h1 {
+        /* Solid color for better readability on mobile */
+        background: none;
+        -webkit-text-fill-color: var(--text);
+      }
+    }
+
     @media (max-width: 640px) {
       .hero-copy h1 {
         font-size: clamp(1.5rem, 7vw, 2rem);
@@ -876,8 +891,8 @@
       <div class="hero-copy">
         <h1>Builder of clean, scalable products.</h1>
         <p>
-          I design and develop modern web apps, MERN stacks, CRM platforms, and
-          trading dashboards with a focus on performance, clarity, and reliability.
+          I design and develop modern web apps—MERN stacks, CRM platforms, and
+          trading dashboards—with a focus on performance, clarity, and reliability.
         </p>
         <div class="actions">
           <a class="btn primary" href="assets/Cosmas-Onyekwelu-CV.pdf" download>
@@ -967,7 +982,7 @@
       <div class="about">
         <p>
           I'm a full-stack developer focused on fast, clean, and accessible experiences.
-          I enjoy building end-to-end systems API design, data models, secure auth,
+          I enjoy building end-to-end systems—API design, data models, secure auth,
           and UI that feels effortless.
         </p>
         <ul class="tags">
