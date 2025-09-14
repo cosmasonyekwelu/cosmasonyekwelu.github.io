@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Cosmas Onyekwelu — Full-Stack Developer</title>
+  <title>Cosmas Onyekwelu  Full-Stack Developer & Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Cosmas Onyekwelu  full-stack developer building clean, scalable products (MERN, Node.js, trading dashboards, CRM). Projects, CV, and contact." />
-  <meta name="theme-color" content="#0b0b0c" />
+  <meta name="description" content="Experienced full-stack developer specializing in modern web applications, trading platforms, and CRM systems. Portfolio showcasing innovative solutions." />
+  <meta name="theme-color" content="#0a0a12" />
   <meta name="color-scheme" content="dark light" />
   <link rel="canonical" href="https://cosmasonyekwelu.github.io/" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:site_name" content="Cosmas Onyekwelu" />
-  <meta property="og:title" content="Cosmas Onyekwelu  Full-Stack Developer" />
-  <meta property="og:description" content="Projects, CV, and contact. Modern web apps (MERN), CRM systems, and trading tools." />
+  <meta property="og:title" content="Cosmas Onyekwelu | Full-Stack Developer" />
+  <meta property="og:description" content="Building innovative digital solutions with modern technologies. Explore my portfolio of web applications and software projects." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cosmasonyekwelu.github.io/" />
   <meta property="og:image" content="assets/og-card.png" />
@@ -21,1058 +21,350 @@
   <!-- Preload critical resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
   </noscript>
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="/assets/image.jpg">
 
-  <!-- Styles -->
-  <style>
-    /* ===== Variables & Base Styles ===== */
-    :root {
-      --bg: #0b0b0c;
-      --bg-soft: #121214;
-      --card: #151518;
-      --text: #f6f7f9;
-      --muted: #a6adbb;
-      --line: #24262b;
-      --accent: #2563eb;
-      --accent-2: #60a5fa;
-      --radius: 16px;
-      --container: 1100px;
-      --shadow: 0 8px 24px rgba(0,0,0,.25);
-      --shadow-soft: 0 4px 14px rgba(0,0,0,.18);
-      --step--1: clamp(.9rem, .8rem + .2vw, 1rem);
-      --step-0: clamp(1rem, .9rem + .3vw, 1.125rem);
-      --step-1: clamp(1.25rem, 1.1rem + .8vw, 1.5rem);
-      --step-2: clamp(1.6rem, 1.2rem + 1.8vw, 2.25rem);
-      --step-3: clamp(2rem, 1.6rem + 2.8vw, 3rem);
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #f7f7fa;
-        --bg-soft: #ffffff;
-        --card: #ffffff;
-        --text: #111318;
-        --muted: #535a67;
-        --line: #e9ebef;
-        --shadow: 0 8px 24px rgba(0,0,0,.08);
-        --shadow-soft: 0 4px 14px rgba(0,0,0,.06);
-      }
-    }
-
-    * { 
-      box-sizing: border-box; 
-      margin: 0;
-      padding: 0;
-    }
-    
-    html, body { 
-      height: 100%; 
-    }
-    
-    body {
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-      color: var(--text);
-      background: radial-gradient(1200px 800px at 10% -20%, #1b1b20 0%, transparent 60%),
-                  radial-gradient(1000px 700px at 100% 0%, #141418 0%, transparent 60%),
-                  var(--bg);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      padding: 0;
-      margin: 0;
-    }
-
-    /* ===== Accessibility ===== */
-    .skip-link {
-      position: absolute; 
-      left: 8px; 
-      top: -40px;
-      background: var(--card); 
-      color: var(--text);
-      padding: 8px 12px; 
-      border-radius: 10px; 
-      z-index: 999;
-      border: 1px solid var(--line);
-      transition: top .15s ease;
-    }
-    
-    .skip-link:focus { 
-      top: 8px; 
-    }
-
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-      border-radius: 8px;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { 
-        animation: none !important; 
-        transition: none !important; 
-      }
-    }
-
-    /* ===== Layout ===== */
-    .container { 
-      width: min(100% - 2rem, var(--container)); 
-      margin-inline: auto; 
-    }
-    
-    .section { 
-      padding: 5rem 0; 
-    }
-    
-    .section-title {
-      font-size: var(--step-2); 
-      line-height: 1.2; 
-      letter-spacing: -0.02em; 
-      margin: 0 0 2.5rem;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -0.5rem;
-      left: 0;
-      width: 3rem;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 3px;
-    }
-
-    /* ===== Header & Navigation ===== */
-    .site-header {
-      position: relative; 
-      padding-top: 1.5rem;
-      background:
-        radial-gradient(800px 400px at 20% 10%, rgba(37,99,235,.15), transparent 60%),
-        linear-gradient(to bottom, rgba(0,0,0,.25), transparent 40%);
-    }
-
-    .nav { 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      gap: 1rem; 
-      position: relative;
-    }
-
-    .brand {
-      font-weight: 800; 
-      letter-spacing: -0.02em; 
-      font-size: 1.25rem; 
-      padding: 0.5rem 0; 
-      color: var(--text);
-      text-decoration: none;
-      transition: opacity 0.2s ease;
-    }
-
-    .brand:hover {
-      opacity: 0.8;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--muted); 
-      margin-left: 1.5rem; 
-      font-size: var(--step--1); 
-      text-decoration: none; 
-      transition: color .2s ease;
-      position: relative;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus { 
-      color: var(--text); 
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover::after,
-    .nav-links a:focus::after {
-      width: 100%;
-    }
-
-    .nav-links .gh {
-      border: 1px solid var(--line); 
-      padding: 0.5rem 1rem; 
-      border-radius: 999px;
-      transition: all 0.2s ease;
-    }
-
-    .nav-links .gh:hover,
-    .nav-links .gh:focus { 
-      border-color: var(--accent); 
-      color: var(--accent-2); 
-      background: rgba(37, 99, 235, 0.1);
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 30px;
-      height: 24px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      z-index: 1000;
-    }
-
-    .menu-toggle span {
-      width: 100%;
-      height: 2px;
-      background: var(--text);
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    /* ===== Hero Section ===== */
-    .hero {
-      display: grid; 
-      grid-template-columns: 1.2fr .8fr;
-      gap: clamp(2rem, 4vw, 3rem); 
-      align-items: center; 
-      padding: 5rem 0;
-      min-height: 80vh;
-    }
-
-    .hero-copy h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1.1; 
-      margin: 0 0 1.5rem; 
-      letter-spacing: -0.03em;
-      color: var(--text); /* Solid color instead of gradient for better readability */
-      font-weight: 800;
-    }
-
-    /* Gradient text for larger screens only */
-    @media (min-width: 769px) {
-      .hero-copy h1 {
-        background: linear-gradient(135deg, var(--text) 0%, var(--accent-2) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-    }
-
-    .hero-copy p { 
-      margin: 0 0 2rem; 
-      max-width: 60ch; 
-      color: var(--muted); 
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      line-height: 1.7;
-    }
-
-    .actions { 
-      display: flex; 
-      gap: 1rem; 
-      flex-wrap: wrap; 
-    }
-
-    .hero-media { 
-      display: flex; 
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .avatar-container {
-      position: relative;
-      width: clamp(160px, 35vw, 240px);
-      height: clamp(160px, 35vw, 240px);
-    }
-
-    .avatar {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--accent);
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 2;
-    }
-
-    .avatar-container::before {
-      content: '';
-      position: absolute;
-      width: 105%;
-      height: 105%;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      opacity: 0.5;
-      filter: blur(15px);
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-
-    .avatar:hover {
-      transform: scale(1.03);
-      box-shadow: 0 15px 35px rgba(0,0,0,.3);
-    }
-
-    .avatar:hover + ::before {
-      opacity: 0.7;
-      filter: blur(20px);
-    }
-
-    /* ===== Buttons ===== */
-    .btn {
-      display: inline-flex; 
-      align-items: center; 
-      gap: 0.5rem;
-      padding: 0.875rem 1.5rem; 
-      border-radius: 12px; 
-      border: 1px solid var(--line);
-      text-decoration: none; 
-      font-weight: 600; 
-      font-size: var(--step--1);
-      color: var(--text); 
-      background: var(--bg-soft); 
-      box-shadow: var(--shadow-soft);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .btn:hover,
-    .btn:focus { 
-      transform: translateY(-2px); 
-      border-color: var(--accent); 
-      box-shadow: 0 10px 25px rgba(0,0,0,.2);
-    }
-
-    .btn.primary { 
-      background: linear-gradient(135deg, var(--accent), #1d4ed8); 
-      border-color: transparent; 
-      color: #fff; 
-    }
-
-    .btn.primary:hover,
-    .btn.primary:focus {
-      background: linear-gradient(135deg, #1d4ed8, var(--accent));
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-    }
-
-    .btn.ghost { 
-      background: transparent; 
-      border-color: var(--line);
-    }
-
-    .btn.ghost:hover,
-    .btn.ghost:focus {
-      background: rgba(96, 165, 250, 0.1);
-      border-color: var(--accent);
-    }
-
-    .btn.sm { 
-      padding: 0.6rem 1rem; 
-      border-radius: 10px; 
-      font-weight: 600; 
-      font-size: 0.8rem;
-    }
-
-    .btn.disabled { 
-      opacity: .6; 
-      pointer-events: none; 
-    }
-
-    /* ===== Cards & Grid ===== */
-    .grid { 
-      display: grid; 
-      gap: 1.5rem; 
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    }
-
-    .card {
-      background: var(--card); 
-      border: 1px solid var(--line); 
-      border-radius: var(--radius);
-      padding: 1.75rem; 
-      box-shadow: var(--shadow-soft);
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover,
-    .card:focus-within { 
-      transform: translateY(-5px); 
-      border-color: rgba(96,165,250,.65); 
-      box-shadow: 0 15px 35px rgba(0,0,0,.15);
-    }
-
-    .card:hover::before,
-    .card:focus-within::before {
-      transform: scaleX(1);
-    }
-
-    .card-head { 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      gap: 0.5rem; 
-      margin-bottom: 1.25rem;
-    }
-
-    .card h3 { 
-      margin: 0; 
-      font-size: 1.25rem; 
-      letter-spacing: -0.02em; 
-      color: var(--text);
-    }
-
-    .card p { 
-      margin: 0 0 1.5rem; 
-      color: var(--muted); 
-      flex-grow: 1;
-      line-height: 1.6;
-    }
-
-    .card-actions { 
-      display: flex; 
-      gap: 0.75rem; 
-      margin-top: auto;
-    }
-
-    /* Tags */
-    .chip {
-      display: inline-block; 
-      padding: 0.35rem 0.875rem; 
-      border: 1px solid var(--line);
-      border-radius: 999px; 
-      font-size: .75rem; 
-      color: var(--muted);
-      white-space: nowrap;
-      font-weight: 500;
-      background: var(--bg-soft);
-    }
-
-    /* ===== About Section ===== */
-    .about { 
-      display: grid; 
-      gap: 2rem; 
-    }
-
-    .tags { 
-      list-style: none; 
-      padding: 0; 
-      margin: 0; 
-      display: flex; 
-      flex-wrap: wrap; 
-      gap: 0.75rem; 
-    }
-
-    .tags li {
-      padding: 0.6rem 1rem; 
-      border-radius: 999px;
-      background: rgba(96,165,250,.14); 
-      color: #cfe1ff; 
-      border: 1px solid rgba(96,165,250,.28); 
-      font-size: .85rem;
-      font-weight: 500;
-      transition: all 0.2s ease;
-    }
-
-    .tags li:hover {
-      transform: translateY(-2px);
-      background: rgba(96,165,250,.2);
-      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
-    }
-
-    @media (prefers-color-scheme: light) {
-      .tags li { 
-        color: #173a7a; 
-        background: rgba(96,165,250,.14); 
-        border-color: rgba(96,165,250,.25); 
-      }
-    }
-
-    /* ===== Contact Section ===== */
-    .contact-line { 
-      color: var(--muted); 
-      margin-bottom: 1.5rem;
-      font-size: var(--step-0);
-    }
-
-    .contact-line a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .contact-line a:hover {
-      color: var(--accent-2);
-      text-decoration: underline;
-    }
-
-    .socials {
-      display: flex; 
-      gap: 1rem; 
-      align-items: center;
-      list-style: none; 
-      padding: 0; 
-      margin: 0;
-    }
-
-    .socials a {
-      display: flex; 
-      align-items: center;
-      justify-content: center;
-      width: 45px; 
-      height: 45px;
-      border-radius: 12px; 
-      border: 1px solid var(--line);
-      color: var(--muted); 
-      text-decoration: none;
-      transition: all 0.3s ease;
-      background: var(--bg-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .socials a::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 1;
-    }
-
-    .socials a i {
-      position: relative;
-      z-index: 2;
-      transition: color 0.3s ease;
-    }
-
-    .socials a:hover,
-    .socials a:focus { 
-      transform: translateY(-3px); 
-      border-color: var(--accent); 
-      box-shadow: 0 8px 20px rgba(0,0,0,.15);
-    }
-
-    .socials a:hover::before,
-    .socials a:focus::before {
-      opacity: 1;
-    }
-
-    .socials a:hover i,
-    .socials a:focus i {
-      color: white;
-    }
-
-    /* ===== Footer ===== */
-    .site-footer { 
-      border-top: 1px solid var(--line); 
-      margin-top: 4rem; 
-      padding: 2rem 0;
-    }
-
-    .foot { 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      gap: 1rem; 
-    }
-
-    .foot p { 
-      margin: 0; 
-      color: var(--muted); 
-      font-size: .95rem; 
-    }
-
-    .to-top {
-      display: inline-flex; 
-      align-items: center; 
-      justify-content: center;
-      width: 45px; 
-      height: 45px; 
-      border-radius: 12px;
-      border: 1px solid var(--line); 
-      background: var(--bg-soft); 
-      color: var(--muted);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .to-top:hover,
-    .to-top:focus { 
-      border-color: var(--accent); 
-      color: var(--accent-2); 
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,.1);
-    }
-
-    /* ===== Responsive Design ===== */
-    @media (max-width: 900px) {
-      .hero { 
-        grid-template-columns: 1fr; 
-        padding: 3rem 0 2rem;
-        text-align: center;
-        min-height: auto;
-        gap: 2rem;
-      }
-      
-      .hero-media { 
-        order: -1; 
-        margin-bottom: 2rem;
-      }
-      
-      .hero-copy h1 {
-        font-size: clamp(1.75rem, 6vw, 2.5rem);
-        margin: 0 0 1.25rem;
-        line-height: 1.2;
-      }
-      
-      .hero-copy p {
-        margin-left: auto;
-        margin-right: auto;
-        font-size: clamp(1rem, 3vw, 1.1rem);
-        margin-bottom: 1.75rem;
-      }
-      
-      .actions {
-        justify-content: center;
-      }
-
-      .section {
-        padding: 3.5rem 0;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero-copy h1 {
-        /* Solid color for better readability on mobile */
-        background: none;
-        -webkit-text-fill-color: var(--text);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero-copy h1 {
-        font-size: clamp(1.5rem, 7vw, 2rem);
-        line-height: 1.3;
-      }
-      
-      .hero-copy p {
-        font-size: clamp(0.95rem, 3.5vw, 1.05rem);
-      }
-      
-      .actions { 
-        gap: 0.75rem; 
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .btn {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-      }
-      
-      .foot {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.25rem;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .nav-links a {
-        margin-left: 1rem;
-        font-size: 0.9rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        padding: 2.5rem 0 1.5rem;
-      }
-      
-      .hero-copy h1 {
-        font-size: 1.75rem;
-        margin: 0 0 1rem;
-      }
-      
-      .hero-copy p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-      }
-      
-      .section {
-        padding: 3rem 0;
-      }
-      
-      .container {
-        width: min(100% - 1.5rem, var(--container));
-      }
-    }
-
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-      }
-      
-      .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background: var(--card);
-        border-left: 1px solid var(--line);
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 6rem 2rem 2rem;
-        gap: 1.5rem;
-        transition: right 0.3s ease;
-        z-index: 100;
-        box-shadow: -5px 0 25px rgba(0,0,0,.1);
-      }
-      
-      .nav-links.active {
-        right: 0;
-      }
-      
-      .nav-links a {
-        margin-left: 0;
-        font-size: 1.1rem;
-        padding: 0.5rem 0;
-      }
-
-      .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-
-      .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-      }
-    }
-
-    /* Reduced motion support */
-    @media (prefers-reduced-motion: reduce) {
-      .card,
-      .avatar,
-      .btn,
-      .tags li,
-      .to-top,
-      .nav-links a::after,
-      .socials a {
-        transition: none;
-      }
-      
-      .card:hover,
-      .card:focus-within,
-      .avatar:hover,
-      .btn:hover,
-      .btn:focus,
-      .tags li:hover,
-      .to-top:hover,
-      .to-top:focus,
-      .socials a:hover,
-      .socials a:focus {
-        transform: none;
-      }
-    }
-  </style>
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Cosmas Onyekwelu",
-    "url": "https://cosmasonyekwelu.github.io/",
-    "email": "mailto:onyecosmas@gmail.com",
-    "sameAs": [
-      "https://github.com/cosmasonyekwelu",
-      "https://twitter.com/CosmasOnyekwelu",
-      "https://www.facebook.com/cosmasonyekwelu",
-      "https://www.instagram.com/cosmasonyekwelu",
-      "https://tiktok.com/@cosmasonyekwelu",
-      "https://medium.com/@cosmasonyekwelu"
-    ],
-    "jobTitle": "Full-Stack Developer"
-  }
-  </script>
+  <!-- CSS File -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body id="top">
-  <!-- <a class="skip-link" href="#main">Skip to content</a> -->
+<body>
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <header class="site-header" role="banner">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Cosmas Onyekwelu — Home">Cosmas Onyekwelu</a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="cv.html">CV</a>
-        <a class="gh" href="https://github.com/cosmasonyekwelu" target="_blank" rel="noopener noreferrer">
-          <span aria-hidden="true">GitHub</span>
-          <span class="sr-only">GitHub (opens in new tab)</span>
-        </a>
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="brand">Cosmas<span>.</span></a>
+        
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <div class="nav-links">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="cv.html" class="gh">Resume</a>
+        </div>
       </nav>
-      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-
-    <section class="hero container">
-      <div class="hero-copy">
-        <h1>Builder of clean, <br> scalable products.</h1>
-        <p>
-          I design and develop modern web apps, MERN stacks, CRM platforms, and
-          trading dashboards with a focus on performance, clarity, and reliability.
-        </p>
-        <div class="actions">
-          <a class="btn primary" href="assets/Cosmas-Onyekwelu-CV.pdf" download>
-            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV
-          </a>
-          <a class="btn ghost" href="mailto:onyecosmas@gmail.com">
-            <i class="fa-regular fa-envelope" aria-hidden="true"></i> Contact
-          </a>
-        </div>
-      </div>
-      <div class="hero-media">
-        <div class="avatar-container">
-          <img
-            class="avatar"
-            src="assets/image.jpg"
-            alt="Portrait of Cosmas Onyekwelu"
-            width="240"
-            height="240"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
-        </div>
-      </div>
-    </section>
   </header>
 
-  <main id="main">
-    <section id="projects" class="section container" aria-labelledby="projects-heading">
-      <h2 id="projects-heading" class="section-title">Featured Projects</h2>
-      <div class="grid">
-        <!-- Zura CRM -->
-        <article class="card">
-          <div class="card-head">
-            <h3>Zura CRM</h3>
-            <span class="chip">CRM</span>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Transforming Ideas Into <span>Digital Reality</span></h1>
+            <p>I'm a full-stack developer specializing in building exceptional web applications, trading platforms, and CRM systems with modern technologies.</p>
+            <div class="hero-actions">
+              <a href="assets/Cosmas-Onyekwelu-CV.pdf"  class="btn btn-primary" download>Download CV</a>
+              <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
           </div>
-          <p>
-            A Zoho-style CRM with leads, deals, quotes/invoices, documents, and calendar.
-            Built with Node.js, Express, MongoDB, and React.
-          </p>
-          <div class="card-actions">
-            <a class="btn sm" href="https://github.com/cosmasonyekwelu/zuracrm" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> Repo
-              <span class="sr-only"> (opens in new tab)</span>
-            </a>
+          
+          <div class="hero-image">
+            <div class="image-container circle">
+              <img src="/assets/image.jpg" alt="Cosmas Onyekwelu - Full Stack Developer">
+            </div>
+            <div class="floating-element">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="floating-element">
+              <i class="fas fa-laptop-code"></i>
+            </div>
           </div>
-        </article>
-
-        <!-- TwitterPlus -->
-        <article class="card">
-          <div class="card-head">
-            <h3>TwitterPlus</h3>
-            <span class="chip">Social</span>
-          </div>
-          <p>
-            A modern X/Twitter-style app: timelines, profiles, DMs (incl. voice notes),
-            robust auth, and mobile-friendly UI.
-          </p>
-          <div class="card-actions">
-            <a class="btn sm" href="https://github.com/cosmasonyekwelu/twitterplus" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> Repo
-              <span class="sr-only"> (opens in new tab)</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- RefTrader -->
-        <article class="card">
-          <div class="card-head">
-            <h3>RefTrader</h3>
-            <span class="chip">FinTech</span>
-          </div>
-          <p>
-            Hedge-fund style crypto trading dashboard with risk controls, auditability,
-            and real-time telemetry. Node.js + React.
-          </p>
-          <div class="card-actions">
-            <a class="btn sm disabled" href="#" aria-disabled="true">Demo coming soon</a>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="section container" aria-labelledby="about-heading">
-      <h2 id="about-heading" class="section-title">About</h2>
-      <div class="about">
-        <p>
-          I'm a full-stack developer focused on fast, clean, and accessible experiences.
-          I enjoy building end-to-end systems API design, data models, secure auth,
-          and UI that feels effortless.
-        </p>
-        <ul class="tags">
-          <li>MERN</li>
-          <li>Node.js</li>
-          <li>MongoDB</li>
-          <li>React</li>
-          <li>TypeScript</li>
-          <li>Python</li>
-          <li>Trading Bots</li>
-          <li>Web3</li>
-        </ul>
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <p>Hello! I'm Cosmas, a passionate full-stack developer with expertise in creating robust, scalable web applications. With a strong foundation in both front-end and back-end technologies, I bring ideas to life through clean, efficient code.</p>
+            
+            <p>My journey in software development began several years ago, and I've since worked on various projects ranging from trading dashboards to comprehensive CRM systems. I'm dedicated to creating solutions that not only meet but exceed user expectations.</p>
+            
+            <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.</p>
+            
+            <div class="skills-container">
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Express</span>
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Django</span>
+              <span class="skill-pill">AWS</span>
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">Git</span>
+            </div>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">25+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section container" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" class="section-title">Contact</h2>
-      <p class="contact-line">
-        Prefer email? <a href="mailto:onyecosmas@gmail.com">onyecosmas@gmail.com</a>
-      </p>
-      <ul class="socials">
-        <li><a href="https://twitter.com/CosmasOnyekwelu" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" title="Twitter/X">
-          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
-        <li><a href="https://github.com/cosmasonyekwelu" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
-          <i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.instagram.com/cosmasonyekwelu" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
-          <i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
-        <li><a href="https://tiktok.com/@cosmasonyekwelu" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
-          <i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
-        <li><a href="https://medium.com/@cosmasonyekwelu" target="_blank" rel="noopener noreferrer" aria-label="Medium" title="Medium">
-          <i class="fa-brands fa-medium" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.facebook.com/cosmasonyekwelu" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
-          <i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
-      </ul>
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title center">Featured Projects</h2>
+        
+        <div class="projects-grid">
+          <!-- Zura CRM Project -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="/assets/zura-crm.png" alt="Zura CRM Project">
+            </div>
+            
+            <div class="project-content">
+              <h3 class="project-title">Zura CRM</h3>
+              <p class="project-description">A comprehensive customer relationship management system designed for modern businesses. Features include lead management, sales pipeline tracking, customer communication tools, and analytics dashboard.</p>
+              
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">JWT Auth</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="#" class="btn btn-primary btn-sm">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="https://github.com/cosmasonyekwelu/zuracrm" class="btn btn-secondary btn-sm">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- BTC Transaction Screenshot Generator -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="/assets/btc-generator.png" alt="BTC Transaction Screenshot Generator">
+            </div>
+            
+            <div class="project-content">
+              <h3 class="project-title">BTC Transaction Screenshot Generator</h3>
+              <p class="project-description">A tool that generates realistic Bitcoin transaction screenshots for verification purposes, educational content, or UI mockups. Customize amount, addresses, transaction IDs, and timestamps.</p>
+              
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5 Canvas</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://bitcoin-transaction-screenshot-gene.vercel.app/" class="btn btn-primary btn-sm">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="https://github.com/cosmasonyekwelu/bitcoin-transaction-screenshot-generator" class="btn btn-secondary btn-sm">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- TwitterPlus Project -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="/assets/twitterplus.png" alt="TwitterPlus Project">
+            </div>
+            
+            <div class="project-content">
+              <h3 class="project-title">TwitterPlus</h3>
+              <p class="project-description">An enhanced Twitter client with additional features for power users. Includes advanced filtering, scheduled tweets, analytics, and a cleaner UI with customizable themes and layout options.</p>
+              
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Twitter API</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="#" class="btn btn-primary btn-sm">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="https://github.com/cosmasonyekwelu/twitterplus" class="btn btn-secondary btn-sm">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <p class="contact-text">I'm currently available for freelance work and open to new opportunities. If you have a project in mind or just want to say hello, feel free to reach out!</p>
+            
+            <div class="contact-details">
+              <div class="contact-detail">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-detail-text">
+                  <h4>Email</h4>
+                  <p>onyecosmas@gmail.com</p>
+                </div>
+              </div>
+              
+              <div class="contact-detail">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-detail-text">
+                  <h4>Location</h4>
+                  <p>Lagos, Nigeria</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="social-links">
+              <a href="https://github.com/cosmasonyekwelu" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/cosmasonyekwelu/" class="social-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://twitter.com/CosmasOnyekwelu" class="social-link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/cosmasonyekwelu" class="social-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/cosmasonyekwelu" class="social-link" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://medium.com/@cosmasonyekwelu" class="social-link" aria-label="Medium">
+                <i class="fab fa-medium"></i>
+              </a>
+              <a href="https://www.tiktok.com/@cosmasonyekwelu" class="social-link" aria-label="Tiktok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" class="form-textarea" required></textarea>
+              </div>
+              
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container foot">
-      <p>© 2016–<span id="current-year">2025</span> Cosmas Onyekwelu. All rights reserved.</p>
-      <a class="to-top" href="#top" aria-label="Back to top">
-        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-      </a>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Cosmas Onyekwelu</h3>
+          <p>Full-stack developer building innovative digital solutions with modern technologies.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="cv.html">Resume</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/cosmasonyekwelu">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/cosmasonyekwelu/">LinkedIn</a></li>
+            <li><a href="https://twitter.com/CosmasOnyekwelu">Twitter</a></li>
+            <li><a href="https://www.instagram.com/cosmasonyekwelu">Instagram</a></li>
+            <li><a href="https://www.facebook.com/cosmasonyekwelu">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">© 2016–2025 Cosmas Onyekwelu. All rights reserved.</p>
+        <a href="#home" class="back-to-top" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript for enhanced functionality -->
-  <script>
-    // Set current year in footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-    
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !expanded);
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-      });
-    }
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      if (anchor.getAttribute('href') !== '#') {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-          
-          if (targetElement) {
-            // Close mobile menu if open
-            if (navLinks && navLinks.classList.contains('active')) {
-              navLinks.classList.remove('active');
-              menuToggle.classList.remove('active');
-              menuToggle.setAttribute('aria-expanded', 'false');
-              document.body.style.overflow = '';
-            }
-            
-            targetElement.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
