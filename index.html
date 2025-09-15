@@ -143,100 +143,116 @@
         </div>
       </div>
     </section>
+<section class="section" id="projects">
+  <div class="container">
+    <h2 class="section-title center">Featured Projects</h2>
 
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-      <div class="container">
-        <h2 class="section-title center">Featured Projects</h2>
-        
-        <div class="projects-grid">
-          <!-- Zura CRM Project -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="/assets/zura-crm.png" alt="Zura CRM Project">
-            </div>
-            
-            <div class="project-content">
-              <h3 class="project-title">Zura CRM</h3>
-              <p class="project-description">A comprehensive customer relationship management system designed for modern businesses. Features include lead management, sales pipeline tracking, customer communication tools, and analytics dashboard.</p>
-              
-              <div class="project-tech">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">Express</span>
-                <span class="tech-tag">JWT Auth</span>
-              </div>
-              
-              <div class="project-links">
-                <a href="#" class="btn btn-primary btn-sm">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-                <a href="https://github.com/cosmasonyekwelu/zuracrm" class="btn btn-secondary btn-sm">
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
+    <div class="projects-grid">
+      <!-- Zura CRM Project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="/assets/zura-crm.png" alt="Zura CRM – MERN customer relationship manager">
+        </div>
+
+        <div class="project-content">
+          <h3 class="project-title">Zura CRM</h3>
+          <p class="project-description">
+            Full-stack CRM for SMEs with secure auth (JWT), role-based access, leads & customers,
+            pipeline stages (New / Subscribed / Former), notes/activities, and lightweight analytics.
+            MERN architecture with a clean React UI and a Postman-tested REST API.
+          </p>
+
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">MongoDB (Mongoose)</span>
+            <span class="tech-tag">JWT Auth</span>
+            <span class="tech-tag">REST API</span>
           </div>
-          
-          <!-- BTC Transaction Screenshot Generator -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="/assets/btc-generator.png" alt="BTC Transaction Screenshot Generator">
-            </div>
-            
-            <div class="project-content">
-              <h3 class="project-title">BTC Transaction Screenshot Generator</h3>
-              <p class="project-description">A tool that generates realistic Bitcoin transaction screenshots for verification purposes, educational content, or UI mockups. Customize amount, addresses, transaction IDs, and timestamps.</p>
-              
-              <div class="project-tech">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">HTML5 Canvas</span>
-                <span class="tech-tag">CSS3</span>
-                <span class="tech-tag">Node.js</span>
-              </div>
-              
-              <div class="project-links">
-                <a href="https://bitcoin-transaction-screenshot-gene.vercel.app/" class="btn btn-primary btn-sm">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-                <a href="https://github.com/cosmasonyekwelu/bitcoin-transaction-screenshot-generator" class="btn btn-secondary btn-sm">
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- TwitterPlus Project -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="/assets/twitterplus.png" alt="TwitterPlus Project">
-            </div>
-            
-            <div class="project-content">
-              <h3 class="project-title">TwitterPlus</h3>
-              <p class="project-description">An enhanced Twitter client with additional features for power users. Includes advanced filtering, scheduled tweets, analytics, and a cleaner UI with customizable themes and layout options.</p>
-              
-              <div class="project-tech">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Twitter API</span>
-                <span class="tech-tag">Firebase</span>
-              </div>
-              
-              <div class="project-links">
-                <a href="#" class="btn btn-primary btn-sm">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-                <a href="https://github.com/cosmasonyekwelu/twitterplus" class="btn btn-secondary btn-sm">
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
-            </div>
+
+          <div class="project-links">
+            <a href="https://zuracrmfront-phz7.vercel.app/" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/cosmasonyekwelu/zuracrm" class="btn btn-secondary btn-sm">
+              <i class="fab fa-github"></i> Code
+            </a>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- BTC Transaction Screenshot Generator -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="/assets/btc-generator.png" alt="Bitcoin Transaction Screenshot Generator – React app">
+        </div>
+
+        <div class="project-content">
+          <h3 class="project-title">BTC Transaction Screenshot Generator</h3>
+          <p class="project-description">
+            React app that pulls live on-chain data for a BTC address, computes historical USD values,
+            and renders downloadable, device-framed screenshots using <code>html-to-image</code>.
+            Perfect for documentation, UI mockups, and education.
+          </p>
+
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Vite</span>
+            <span class="tech-tag">Axios</span>
+            <span class="tech-tag">html-to-image</span>
+            <span class="tech-tag">Blockchain.com API</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://bitcoin-transaction-screenshot-gene.vercel.app/" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/cosmasonyekwelu/bitcoin-transaction-screenshot-generator" class="btn btn-secondary btn-sm">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TwitterPlus Project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="/assets/twitterplus.png" alt="TwitterPlus – MERN Twitter/X clone">
+        </div>
+
+        <div class="project-content">
+          <h3 class="project-title">TwitterPlus</h3>
+          <p class="project-description">
+            Full MERN Twitter/X clone: auth, tweets, likes, retweets, follow/unfollow, profiles,
+            search & hashtags, notifications, DMs with voice notes, dark mode, and a mobile-first UI.
+            Real-time updates via WebSockets and media upload support.
+          </p>
+
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">JWT Auth</span>
+            <span class="tech-tag">Socket.IO</span>
+            <span class="tech-tag">Vite</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://twitterplusfront.vercel.app/" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/cosmasonyekwelu/twitterplus" class="btn btn-secondary btn-sm">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section class="section contact" id="contact">
