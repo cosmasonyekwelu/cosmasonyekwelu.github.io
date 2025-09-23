@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cosmas Onyekwelu — Full-Stack Developer (CV)</title>
-  <meta name="description" content="CV of Cosmas Onyekwelu — Full-Stack Developer (MERN, Node.js, React, MongoDB). Projects, experience, and skills." />
+  <title>Cosmas Onyekwelu  Full-Stack Developer (CV)</title>
+  <meta name="description" content="CV of Cosmas Onyekwelu  Full-Stack Developer (MERN, Node.js, React, MongoDB). Projects, experience, and skills." />
   <meta name="color-scheme" content="dark light" />
 
   <!-- Fonts & Icons -->
@@ -88,6 +88,15 @@
     .project-link:hover{text-decoration:underline}
 
     .education-item{background:var(--card-bg);padding:1.1rem;border-radius:10px;border:1px solid var(--border)}
+    
+    .certifications-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(300px,1fr));gap:1.2rem}
+    .certification-card{background:var(--card-bg);padding:1.1rem;border-radius:10px;border:1px solid var(--border);display:flex;flex-direction:column}
+    .certification-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem}
+    .certification-title{font-size:1.05rem;font-weight:800;color:var(--primary)}
+    .certification-date{color:var(--secondary);font-weight:600}
+    .certification-institution{color:var(--secondary);margin-bottom:.5rem;font-size:.95rem}
+    .certification-tech{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.5rem}
+    .cert-tech-pill{background:var(--section-bg);color:var(--dark);padding:.25rem .5rem;border-radius:999px;font-size:.75rem;border:1px solid var(--border)}
 
     footer{text-align:center;margin-top:2.4rem;padding-top:1.1rem;border-top:1px solid var(--border);color:var(--secondary);font-size:.95rem}
 
@@ -102,19 +111,20 @@
       .header-right{text-align:center}
       .contact-info{justify-content:center}
       .experience-header{flex-direction:column;gap:.25rem}
+      .certification-header{flex-direction:column;gap:.25rem}
     }
 
     /* PRINT: force clean white PDF with NO backgrounds/shadows */
     @media print{
       :root{color-scheme: light only}
       body, .cv-container{background:#fff !important;color:#000 !important;box-shadow:none !important}
-      .summary, .skill-category, .project-card, .experience-item, .education-item{
+      .summary, .skill-category, .project-card, .experience-item, .education-item, .certification-card{
         background:#fff !important;box-shadow:none !important;border:1px solid #ddd !important;
       }
-      .skill-pill, .tech-pill{background:#fff !important;border:1px solid #ccc !important}
+      .skill-pill, .tech-pill, .cert-tech-pill{background:#fff !important;border:1px solid #ccc !important}
       .badge{background:#000 !important;color:#fff !important}
       .section-title{color:#000 !important;border-color:#000 !important}
-      .experience-title, .project-title{color:#000 !important}
+      .experience-title, .project-title, .certification-title{color:#000 !important}
       .print-button{display:none !important}
       a{color:#000 !important;text-decoration:none !important}
       /* avoid weird colored bars */
@@ -244,11 +254,70 @@
     </section>
 
     <section class="section">
+      <h3 class="section-title"><i class="fas fa-certificate"></i> Certifications & Training</h3>
+      <div class="certifications-grid">
+        <div class="certification-card">
+          <div class="certification-header">
+            <h4 class="certification-title">Fullstack Web Development (JavaScript)</h4>
+            <div class="certification-date">Oct 2024 – Feb 2025</div>
+          </div>
+          <div class="certification-institution">Tech Studio Academy</div>
+          <p>16-week intensive program covering modern full-stack JavaScript development.</p>
+          <div class="certification-tech">
+            <span class="cert-tech-pill">HTML</span>
+            <span class="cert-tech-pill">CSS</span>
+            <span class="cert-tech-pill">JavaScript (ES6+)</span>
+            <span class="cert-tech-pill">React.js</span>
+            <span class="cert-tech-pill">Node.js</span>
+            <span class="cert-tech-pill">Express.js</span>
+            <span class="cert-tech-pill">MongoDB</span>
+            <span class="cert-tech-pill">Git/GitHub</span>
+          </div>
+        </div>
+
+        <div class="certification-card">
+          <div class="certification-header">
+            <h4 class="certification-title">Back-End Web Development</h4>
+            <div class="certification-date">May 2025 – Aug 2025</div>
+          </div>
+          <div class="certification-institution">New Horizons Nigeria</div>
+          <p>Comprehensive backend development training with focus on modern technologies.</p>
+          <div class="certification-tech">
+            <span class="cert-tech-pill">PHP</span>
+            <span class="cert-tech-pill">MySQL</span>
+            <span class="cert-tech-pill">Laravel</span>
+            <span class="cert-tech-pill">REST APIs</span>
+            <span class="cert-tech-pill">Git/GitHub</span>
+            <span class="cert-tech-pill">Node.js</span>
+            <span class="cert-tech-pill">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="certification-card">
+          <div class="certification-header">
+            <h4 class="certification-title">Backend Development with Python/Django</h4>
+            <div class="certification-date">Sept 2025 – Present</div>
+          </div>
+          <div class="certification-institution">Univelcity</div>
+          <p>Ongoing training in Python backend development with Django framework.</p>
+          <div class="certification-tech">
+            <span class="cert-tech-pill">Python</span>
+            <span class="cert-tech-pill">Django</span>
+            <span class="cert-tech-pill">PostgreSQL</span>
+            <span class="cert-tech-pill">REST APIs</span>
+            <span class="cert-tech-pill">Authentication (JWT/OAuth)</span>
+            <span class="cert-tech-pill">Deployment (Linux/Cloud)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <h3 class="section-title"><i class="fas fa-briefcase"></i> Experience</h3>
       <div class="experience-item">
         <div class="experience-header">
           <h4 class="experience-title">Independent Full-Stack Developer</h4>
-          <div class="experience-date">2018 – Present</div>
+          <div class="experience-date">2024 – Present</div>
         </div>
         <ul class="responsibilities">
           <li>Designed modular REST services with clean MVC patterns; wrote seeders/fixtures and migration-safe schemas.</li>
@@ -263,15 +332,22 @@
       <h3 class="section-title"><i class="fas fa-code"></i> Selected Projects</h3>
       <div class="projects-grid">
         <div class="project-card">
+          <h4 class="project-title"><i class="fas fa-coins"></i> Bitcoin Transaction Screenshot Generator</h4>
+          <p class="project-description">Interactive tool to create realistic Bitcoin transaction screenshots with custom amounts, addresses, and network fees.</p>
+          <div class="project-tech">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">Vercel</span>
+          </div>
+        </div>
+
+        <div class="project-card">
           <h4 class="project-title"><i class="fas fa-address-card"></i> Zura CRM</h4>
           <p class="project-description">Zoho-style CRM with leads, deals, quotes/invoices, documents, and calendar.</p>
           <div class="project-tech">
             <span class="tech-pill">Node.js</span><span class="tech-pill">Express</span>
             <span class="tech-pill">MongoDB</span><span class="tech-pill">React</span>
           </div>
-          <a class="project-link" href="https://github.com/cosmasonyekwelu/zuracrm" target="_blank" rel="noopener">
-            <i class="fab fa-github" aria-hidden="true"></i> View Repository
-          </a>
         </div>
 
         <div class="project-card">
@@ -281,9 +357,6 @@
             <span class="tech-pill">React</span><span class="tech-pill">Node.js</span>
             <span class="tech-pill">WebSockets</span><span class="tech-pill">MongoDB</span>
           </div>
-          <a class="project-link" href="https://github.com/cosmasonyekwelu/twitterplus" target="_blank" rel="noopener">
-            <i class="fab fa-github" aria-hidden="true"></i> View Repository
-          </a>
         </div>
 
         <div class="project-card">
@@ -293,9 +366,6 @@
             <span class="tech-pill">Node.js</span><span class="tech-pill">React</span>
             <span class="tech-pill">Real-time Data</span><span class="tech-pill">Financial APIs</span>
           </div>
-          <a class="project-link" href="#" aria-disabled="true">
-            <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo Coming Soon
-          </a>
         </div>
       </div>
     </section>
@@ -311,7 +381,7 @@
     </section>
 
     <footer>
-     
+      <p>Last updated: <span id="year"></span></p>
     </footer>
   </div>
 
