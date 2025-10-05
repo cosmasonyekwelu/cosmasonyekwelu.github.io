@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Cosmas Onyekwelu | Full-Stack Developer & Software Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Experienced full-stack developer specializing in modern web applications, trading platforms, and CRM systems. Portfolio showcasing innovative solutions." />
-  <meta name="theme-color" content="#0a0a12" />
-  <meta name="color-scheme" content="dark light" />
-  <link rel="canonical" href="https://cosmasonyekwelu.github.io/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmas Onyekwelu | Full-Stack Developer</title>
+  <meta name="description" content="Full-Stack Developer specializing in web applications, trading platforms, and CRM systems">
+  
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
 
-  <!-- Open Graph / Twitter -->
+   <!-- Open Graph / Twitter -->
   <meta property="og:site_name" content="Cosmas Onyekwelu" />
   <meta property="og:title" content="Cosmas Onyekwelu | Full-Stack Developer" />
   <meta property="og:description" content="Building innovative digital solutions with modern technologies. Explore my portfolio of web applications and software projects." />
@@ -18,44 +21,317 @@
   <meta property="og:image" content="assets/og-card.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Preload critical resources -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
-  </noscript>
 
-  <!-- Favicon -->
+    <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="/assets/image.jpg">
+  
+  <!-- Load non-critical resources -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  
+  <!-- Inline critical CSS -->
+  <style>
+    /* Critical CSS - Above the fold styles */
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --bg-light: #ffffff;
+      --bg-dark: #0f172a;
+      --text-light: #1e293b;
+      --text-dark: #f8fafc;
+      --border-light: #e2e8f0;
+      --border-dark: #334155;
+    }
 
-  <!-- CSS File -->
-  <link rel="stylesheet" href="styles.css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Header styles */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      transition: all 0.3s;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text-light);
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--text-light);
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    /* Theme Selector Styles */
+    .theme-selector {
+      position: fixed;
+      top: 1.5rem;
+      right: 5rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 1001;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.5rem;
+      border-radius: 50px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .theme-option {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .theme-option:hover {
+      transform: scale(1.1);
+    }
+
+    .theme-option.active {
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+
+    .theme-blue {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    }
+
+    .theme-black {
+      background: linear-gradient(135deg, #000000, #333333);
+    }
+
+    /* Hero section */
+    .hero {
+      padding: 8rem 0 4rem;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-light);
+      border: 2px solid var(--border-light);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-light);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu-toggle {
+        display: flex;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .theme-selector {
+        top: 0.5rem;
+        right: 4rem;
+        transform: scale(0.8);
+      }
+    }
+  </style>
+  
+  <!-- Deferred CSS -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
 </head>
 <body>
-  <!-- Skip to content link for accessibility -->
+  <!-- Theme Selector -->
+  <div class="theme-selector">
+    <button class="theme-option theme-blue active" data-theme="blue" title="Blue Theme">
+      <i class="fas fa-palette"></i>
+    </button>
+    <button class="theme-option theme-black" data-theme="black" title="Black Theme">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+
+  <!-- Skip link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
-  <header class="site-header" id="header">
+  <!-- Header with navigation -->
+  <header class="header">
     <div class="container">
       <nav class="nav">
-        <a href="#" class="brand">Cosmas<span>.</span></a>
+        <a href="#" class="logo">Cosmas<span>.</span></a>
         
-        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-          <span class="menu-line"></span>
-        </button>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="cv.html" class="nav-link gh">Resume</a></li>
+        </ul>
         
-        <div class="nav-links">
-          <a href="#home" class="nav-link active">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <a href="cv.html" class="nav-link gh">Resume</a>
+        <div class="nav-controls">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+            </span>
+          </button>
+          
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
     </div>
@@ -67,27 +343,17 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1>Transforming Ideas Into <span>Digital Reality</span></h1>
-            <p>I'm a full-stack developer specializing in building exceptional web applications, trading platforms, and CRM systems with modern technologies.</p>
+            <h1 class="hero-title">Cosmas <span>Onyekwelu</span></h1>
+            <h2 class="hero-subtitle">Full-Stack Developer & Creator</h2>
+            <p class="hero-description">Building exceptional digital experiences with modern technologies. Specializing in web applications, trading platforms, and CRM systems.</p>
             <div class="hero-actions">
-              <a href="assets/Cosmas-Onyekwelu-CV.pdf" class="btn btn-primary" download>Download CV</a>
+              <a href="assets/Cosmas-Onyekwelu-CV.pdf" class="btn btn-primary" download="">Download CV </a>
               <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
           </div>
-          
-          <div class="hero-image">
-            <div class="image-container circle">
-              <img src="/assets/image.jpg" alt="Cosmas Onyekwelu - Full Stack Developer" loading="lazy">
-            </div>
-
-            <!-- Sticker: code icon (top-right corner) -->
-            <div class="floating-element float-code" aria-hidden="true">
-              <i class="fas fa-code"></i>
-            </div>
-
-            <!-- Orbiting laptop icon -->
-            <div class="floating-element float-laptop" aria-hidden="true">
-              <i class="fas fa-laptop-code"></i>
+          <div class="hero-visual">
+            <div class="profile-image">
+                <img src="/assets/image.jpg" alt="Cosmas Onyekwelu - Full Stack Developer" loading="lazy">
             </div>
           </div>
         </div>
@@ -98,50 +364,72 @@
     <section class="section about" id="about">
       <div class="container">
         <h2 class="section-title">About Me</h2>
-        
         <div class="about-content">
           <div class="about-text">
             <p>Hello! I'm Cosmas, a passionate full-stack developer with expertise in creating robust, scalable web applications. With a strong foundation in both front-end and back-end technologies, I bring ideas to life through clean, efficient code.</p>
-            
             <p>My journey in software development began several years ago, and I've since worked on various projects ranging from trading dashboards to comprehensive CRM systems. I'm dedicated to creating solutions that not only meet but exceed user expectations.</p>
-            
             <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or trading cryptocurrencies.</p>
-            
-            <div class="skills-container">
-              <span class="skill-pill">JavaScript</span>
-              <span class="skill-pill">TypeScript</span>
-              <span class="skill-pill">React</span>
-              <span class="skill-pill">Node.js</span>
-              <span class="skill-pill">Express</span>
-              <span class="skill-pill">MongoDB</span>
-              <span class="skill-pill">PostgreSQL</span>
-              <span class="skill-pill">Python</span>
-              <span class="skill-pill">Django</span>
-              <span class="skill-pill">AWS</span>
-              <span class="skill-pill">Docker</span>
-              <span class="skill-pill">Git</span>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">25+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Happy Clients</span>
             </div>
           </div>
-          
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-number">25+</div>
-              <div class="stat-label">Projects Completed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="skill-category-title">Frontend</h3>
+            <div class="skill-items">
+              <span class="skill-item">HTML5</span>
+              <span class="skill-item">CSS3</span>
+              <span class="skill-item">JavaScript</span>
+              <span class="skill-item">React</span>
+              <span class="skill-item">TypeScript</span>
             </div>
-            
-            <div class="stat-card">
-              <div class="stat-number">3+</div>
-              <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Backend</h3>
+            <div class="skill-items">
+              <span class="skill-item">Node.js</span>
+              <span class="skill-item">Express</span>
+              <span class="skill-item">Python</span>
+              <span class="skill-item">Django</span>
+              <span class="skill-item">REST APIs</span>
             </div>
-            
-            <div class="stat-card">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Database</h3>
+            <div class="skill-items">
+              <span class="skill-item">MongoDB</span>
+              <span class="skill-item">PostgreSQL</span>
+              <span class="skill-item">MySQL</span>
+              <span class="skill-item">Redis</span>
             </div>
-            
-            <div class="stat-card">
-              <div class="stat-number">10+</div>
-              <div class="stat-label">Technologies</div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Tools & Others</h3>
+            <div class="skill-items">
+              <span class="skill-item">Git</span>
+              <span class="skill-item">Docker</span>
+              <span class="skill-item">AWS</span>
+              <span class="skill-item">Jest</span>
+              <span class="skill-item">Webpack</span>
             </div>
           </div>
         </div>
@@ -263,28 +551,27 @@
     <section class="section contact" id="contact">
       <div class="container">
         <h2 class="section-title">Get In Touch</h2>
-        
         <div class="contact-content">
           <div class="contact-info">
             <p class="contact-text">I'm currently available for freelance work and open to new opportunities. If you have a project in mind or just want to say hello, feel free to reach out!</p>
             
             <div class="contact-details">
-              <div class="contact-detail">
+              <div class="contact-item">
                 <div class="contact-icon">
                   <i class="fas fa-envelope"></i>
                 </div>
-                <div class="contact-detail-text">
-                  <h4>Email</h4>
+                <div class="contact-text">
+                  <h3>Email</h3>
                   <p>onyecosmas@gmail.com</p>
                 </div>
               </div>
               
-              <div class="contact-detail">
+              <div class="contact-item">
                 <div class="contact-icon">
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <div class="contact-detail-text">
-                  <h4>Location</h4>
+                <div class="contact-text">
+                  <h3>Location</h3>
                   <p>Lagos, Nigeria</p>
                 </div>
               </div>
@@ -334,10 +621,10 @@
               
               <div class="form-group">
                 <label for="message" class="form-label">Message</label>
-                <textarea id="message" class="form-textarea" required></textarea>
+                <textarea id="message" class="form-textarea" rows="5" required></textarea>
               </div>
               
-              <button type="submit" class="submit-btn">Send Message</button>
+              <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
           </div>
         </div>
@@ -346,46 +633,20 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-brand">
-          <h3>Cosmas Onyekwelu</h3>
-          <p>Full-stack developer building innovative digital solutions with modern technologies.</p>
-        </div>
-        
-        <div class="footer-links">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="cv.html">Resume</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-links">
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="https://github.com/cosmasonyekwelu">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/cosmasonyekwelu/">LinkedIn</a></li>
-            <li><a href="https://twitter.com/CosmasOnyekwelu">Twitter</a></li>
-            <li><a href="https://www.instagram.com/cosmasonyekwelu">Instagram</a></li>
-            <li><a href="https://www.facebook.com/cosmasonyekwelu">Facebook</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
+        <div class="footer-text">
         <p class="copyright">© 2016–2025 Cosmas Onyekwelu. All rights reserved.</p>
-        <a href="#home" class="back-to-top" aria-label="Back to top">
-          <i class="fas fa-arrow-up"></i>
-        </a>
+        </div>
+        <div class="footer-links">
+          <a href="#home" class="footer-link">Back to Top</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Load JavaScript after page content -->
+  <script src="script.js" defer></script>
 </body>
 </html>
