@@ -23,7 +23,7 @@
   --transition: all 0.3s ease;
 }
 
-/* Black Theme Colors */
+/* Black Theme Colors - FIXED */
 [data-theme="black"] {
   --bg-primary: #000000;
   --bg-secondary: #0a0a0a;
@@ -31,11 +31,21 @@
   --text-primary: #ffffff;
   --text-secondary: #cccccc;
   --text-muted: #666666;
-  --accent-color: #000000;
-  --accent-hover: #333333;
+  --accent-color: #3b82f6;  /* Changed from #000000 to visible blue */
+  --accent-hover: #60a5fa;  /* Changed from #333333 to lighter blue */
   --border-color: #333333;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Header background for black theme */
+[data-theme="black"] .header {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="black"] .theme-selector {
+  background: rgba(0, 0, 0, 0.9);
 }
 
 /* Base Styles */
@@ -693,7 +703,7 @@ a:hover {
 .form-textarea:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .form-textarea {
