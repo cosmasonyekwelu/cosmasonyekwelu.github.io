@@ -1,0 +1,8 @@
+Owner: Cosmas Onyekwelu
+Site: https://cosmasonyekwelu.com
+Role: Software Engineer / Creator
+Location: Remote
+Purpose: Personal site, portfolio, CV
+Tech: HTML, CSS, JavaScript, GitHub Pages
+Contact: https://cosmasonyekwelu.com/links.html
+Updated: 2026-01-26

@@ -1,0 +1,10 @@
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://cosmasonyekwelu.com/sitemap.xml

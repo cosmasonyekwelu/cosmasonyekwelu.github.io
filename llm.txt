@@ -1,0 +1,9 @@
+Site: https://cosmasonyekwelu.com
+Owner: Cosmas Onyekwelu
+Purpose: Personal website, portfolio and CV
+Language: en
+Content-Type: Public
+Crawl-Policy: Allow
+AI-Training: Allow
+Attribution: Required
+Last-Updated: 2026-01-26

@@ -1,0 +1,5 @@
+Contact: mailto:onyecosmas@gmail.com
+Preferred-Languages: en
+Canonical: https://cosmasonyekwelu.com/.well-known/security.txt
+Policy: https://cosmasonyekwelu.com/
+Expires: 2026-12-31
