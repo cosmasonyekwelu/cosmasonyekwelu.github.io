@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contactForm');
   const themeOptions = document.querySelectorAll('.theme-option');
   const currentYear = new Date().getFullYear();
-  
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   // Initialize the theme based on user preference
   function initTheme() {
     const savedTheme = localStorage.getItem('theme') || 'blue';
@@ -28,10 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update active state of theme options
     themeOptions.forEach(option => {
-      option.classList.remove('active');
-      if (option.getAttribute('data-theme') === theme) {
-        option.classList.add('active');
-      }
+      const isActive = option.getAttribute('data-theme') === theme;
+      option.classList.toggle('active', isActive);
+      option.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
     
     // Update theme toggle icon
@@ -79,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Toggle mobile menu
   function toggleMobileMenu() {
+    if (!mobileMenuToggle || !navLinks) return;
     const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
     mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
     navLinks.classList.toggle('active');
@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Close mobile menu when clicking on a link
   function closeMobileMenu() {
+    if (!mobileMenuToggle || !navLinks) return;
     mobileMenuToggle.setAttribute('aria-expanded', 'false');
     navLinks.classList.remove('active');
     mobileMenuToggle.classList.remove('active');
@@ -124,6 +125,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle form submission
   function handleFormSubmit(e) {
     e.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
     
     // Get form data
     const formData = new FormData(contactForm);
@@ -150,6 +156,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function initScrollReveal() {
     const revealElements = document.querySelectorAll('.section-title, .project-card, .skill-category, .stat');
     
+    if (!('IntersectionObserver' in window)) {
+      revealElements.forEach(element => element.classList.add('revealed'));
+      return;
+    }
     // Create Intersection Observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -192,16 +202,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add header scroll effect
   function initHeaderScroll() {
     const header = document.querySelector('.header');
-    
+    if (!header) return;
     window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        header.style.padding = '0.5rem 0';
-        header.style.boxShadow = 'var(--shadow)';
-      } else {
-        header.style.padding = '1rem 0';
-        header.style.boxShadow = 'none';
-      }
-    });
+      
+             header.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
   }
   
   // Optimize images - Lazy load non-critical images
@@ -262,6 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
+      if (!navLinks) return;
       if (!e.target.closest('.nav') && navLinks.classList.contains('active')) {
         closeMobileMenu();
       }

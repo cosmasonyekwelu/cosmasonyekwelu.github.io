@@ -129,6 +129,11 @@ a:hover {
   color: var(--accent-hover);
 }
 
+a:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 /* Header & Navigation */
 .header {
   position: fixed;
@@ -140,6 +145,10 @@ a:hover {
   box-shadow: var(--shadow);
   z-index: 1000;
   transition: var(--transition);
+}
+
+.header.scrolled {
+  box-shadow: var(--shadow);
 }
 
 .nav {
@@ -1043,6 +1052,18 @@ a:hover {
     transform: scale(0.9);
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
 /* Print Styles */
 @media print {
