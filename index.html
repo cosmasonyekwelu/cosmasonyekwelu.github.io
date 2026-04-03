@@ -136,24 +136,32 @@
       transition: 0.3s;
     }
 
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
     /* Theme Selector Styles */
     .theme-selector {
       position: fixed;
-      top: 1.5rem;
-      right: 5rem;
+      top: 0.85rem;
+      right: 4rem;
       display: flex;
+      align-items: center;
       gap: 0.5rem;
       z-index: 1001;
       background: rgba(255, 255, 255, 0.9);
-      padding: 0.5rem;
+      padding: 0.4rem;
       border-radius: 50px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(10px);
     }
 
     .theme-option {
-      width: 40px;
-      height: 40px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       border: none;
       cursor: pointer;
@@ -286,9 +294,39 @@
       }
 
       .theme-selector {
-        top: 0.5rem;
+        top: 0.75rem;
+        right: 3.2rem;
+        gap: 0.3rem;
+        padding: 0.3rem;
+      }
+
+      .theme-option {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .nav {
+        gap: 0.5rem;
+      }
+
+      .nav-controls {
+        gap: 0.5rem;
+      }
+
+      .theme-selector {
         right: 4rem;
-        transform: scale(0.8);
+      }
+
+      .theme-option {
+        width: 30px;
+        height: 30px;
+      }
+
+      .hero-title {
+        font-size: 1.9rem;
+        line-height: 1.15;
       }
     }
   </style>
@@ -298,11 +336,11 @@
 </head>
 <body>
   <!-- Theme Selector -->
-  <div class="theme-selector">
-    <button class="theme-option theme-blue active" data-theme="blue" title="Blue Theme">
+  <div class="theme-selector" role="group" aria-label="Theme selector">
+    <button type="button" class="theme-option theme-blue active" data-theme="blue" title="Blue Theme" aria-label="Switch to blue theme" aria-pressed="true">
       <i class="fas fa-palette"></i>
     </button>
-    <button class="theme-option theme-black" data-theme="black" title="Black Theme">
+    <button type="button" class="theme-option theme-black" data-theme="black" title="Black Theme" aria-label="Switch to black theme" aria-pressed="false">
       <i class="fas fa-moon"></i>
     </button>
   </div>
@@ -324,14 +362,7 @@
         </ul>
         
         <div class="nav-controls">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <span class="theme-icon">
-              <i class="fas fa-sun"></i>
-              <i class="fas fa-moon"></i>
-            </span>
-          </button>
-          
-          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+          <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>

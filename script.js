@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
   'use strict';
   
   // DOM Elements
-  const themeToggle = document.getElementById('themeToggle');
   const mobileMenuToggle = document.getElementById('mobileMenuToggle');
   const navLinks = document.querySelector('.nav-links');
   const contactForm = document.getElementById('contactForm');
@@ -33,37 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
       option.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
     
-    // Update theme toggle icon
-    updateThemeToggleIcon(theme);
-    
     // Save theme preference
     localStorage.setItem('theme', theme);
-  }
-  
-  // Update theme toggle icon based on current theme
-  function updateThemeToggleIcon(theme) {
-    const themeIcon = document.querySelector('.theme-icon');
-    if (!themeIcon) return;
-    
-    const sunIcon = themeIcon.querySelector('.fa-sun');
-    const moonIcon = themeIcon.querySelector('.fa-moon');
-    
-    if (theme === 'blue') {
-      // Light mode - show moon
-      if (sunIcon) sunIcon.style.opacity = '0';
-      if (moonIcon) moonIcon.style.opacity = '1';
-    } else {
-      // Black mode - show sun
-      if (sunIcon) sunIcon.style.opacity = '1';
-      if (moonIcon) moonIcon.style.opacity = '0';
-    }
-  }
-  
-  // Toggle between blue and black themes
-  function toggleTheme() {
-    const currentTheme = localStorage.getItem('theme') || 'blue';
-    const newTheme = currentTheme === 'blue' ? 'black' : 'blue';
-    setTheme(newTheme);
   }
   
   // Initialize theme selector
@@ -91,6 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuToggle.setAttribute('aria-expanded', 'false');
     navLinks.classList.remove('active');
     mobileMenuToggle.classList.remove('active');
+  }
+
+  // Reset the mobile menu state once we leave the mobile breakpoint
+  function handleViewportChange() {
+    if (window.innerWidth >= 768) {
+      closeMobileMenu();
+    }
   }
   
   // Smooth scrolling for anchor links
@@ -246,13 +223,11 @@ document.addEventListener('DOMContentLoaded', function() {
     optimizeImages();
     
     // Add event listeners
-    if (themeToggle) {
-      themeToggle.addEventListener('click', toggleTheme);
-    }
-    
     if (mobileMenuToggle) {
       mobileMenuToggle.addEventListener('click', toggleMobileMenu);
     }
+
+    window.addEventListener('resize', handleViewportChange, { passive: true });
     
     // Close mobile menu when clicking on a nav link
     const navLinkElements = document.querySelectorAll('.nav-link');
