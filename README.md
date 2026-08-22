@@ -1,3 +1,5 @@
+
+
 # Cosmas Onyekwelu – Personal Website
 
 Welcome to my personal website!
@@ -11,6 +13,7 @@ This site serves as a central hub for everything I do — from showcasing my pro
 
 - **About Me**: Learn who I am and what I do.
 - **Projects**: Explore some of the work I’ve done in web development, programming, or other creative fields.
+- **CV / Resume**: [View my CV](cv.html).
 - **Contact Info**: [onyecosmas@gmail.com](mailto:onyecosmas@gmail.com).
 
 ## Tech Stack
