@@ -561,6 +561,28 @@ a:focus-visible {
   gap: 1.5rem;
 }
 
+/* Responsive layout: 5 columns on wide screens, 2-3 on medium, 1 on mobile */
+@media (min-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 .skill-category {
   background-color: var(--bg-primary);
   padding: 1.5rem;

@@ -84,81 +84,6 @@
       transition: all 0.3s;
     }
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-decoration: none;
-      color: var(--text-light);
-    }
-
-    .logo span {
-      color: var(--primary);
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-
-    .nav-link {
-      text-decoration: none;
-      color: var(--text-light);
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-link:hover {
-      color: var(--primary);
-    }
-
-    .mobile-menu-toggle {
-      display: none;
-      flex-direction: column;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.5rem;
-    }
-
-    .mobile-menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background: var(--text-light);
-      margin: 3px 0;
-      transition: 0.3s;
-    }
-
-    .nav-controls {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-shrink: 0;
-    }
-
-    /* Theme Selector Styles */
-    .theme-selector {
-      position: fixed;
-      top: 0.85rem;
-      right: 4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      z-index: 1001;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 0.4rem;
-      border-radius: 50px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px);
-    }
-
     .theme-option {
       width: 34px;
       height: 34px;
@@ -418,7 +343,7 @@
               <span class="stat-label">Projects Completed</span>
             </div>
             <div class="stat">
-              <span class="stat-number">3+</span>
+              <span class="stat-number">4+</span>
               <span class="stat-label">Years Experience</span>
             </div>
             <div class="stat">
@@ -439,44 +364,76 @@
       <div class="container">
         <h2 class="section-title">Skills & Technologies</h2>
         <div class="skills-grid">
-          <div class="skill-category">
-            <h3 class="skill-category-title">Frontend</h3>
+          <div class="skill-category" aria-labelledby="skills-frontend">
+            <h3 id="skills-frontend" class="skill-category-title">Frontend</h3>
             <div class="skill-items">
               <span class="skill-item">HTML5</span>
               <span class="skill-item">CSS3</span>
               <span class="skill-item">JavaScript</span>
               <span class="skill-item">React</span>
+              <span class="skill-item">Next.js</span>
               <span class="skill-item">TypeScript</span>
+              <span class="skill-item">Tailwind CSS</span>
+              <span class="skill-item">Vite</span>
+              <span class="skill-item">TanStack Query</span>
+              <span class="skill-item">Zustand</span>
             </div>
           </div>
-          <div class="skill-category">
-            <h3 class="skill-category-title">Backend</h3>
+
+          <div class="skill-category" aria-labelledby="skills-backend">
+            <h3 id="skills-backend" class="skill-category-title">Backend</h3>
             <div class="skill-items">
               <span class="skill-item">Node.js</span>
               <span class="skill-item">Express</span>
               <span class="skill-item">Python</span>
               <span class="skill-item">Django</span>
+              <span class="skill-item">Django REST Framework</span>
+              <span class="skill-item">FastAPI</span>
               <span class="skill-item">REST APIs</span>
+              <span class="skill-item">WebSockets</span>
+              <span class="skill-item">MVC Architecture</span>
             </div>
           </div>
-          <div class="skill-category">
-            <h3 class="skill-category-title">Database</h3>
+
+          <div class="skill-category" aria-labelledby="skills-ai">
+            <h3 id="skills-ai" class="skill-category-title">AI &amp; Automation</h3>
+            <div class="skill-items">
+              <span class="skill-item">OpenAI API</span>
+              <span class="skill-item">Claude AI (Anthropic)</span>
+              <span class="skill-item">n8n Workflow Automation</span>
+              <span class="skill-item">AI Agents</span>
+              <span class="skill-item">Prompt Engineering</span>
+              <span class="skill-item">LLM Integration</span>
+            </div>
+          </div>
+
+          <div class="skill-category" aria-labelledby="skills-database">
+            <h3 id="skills-database" class="skill-category-title">Database</h3>
             <div class="skill-items">
               <span class="skill-item">MongoDB</span>
               <span class="skill-item">PostgreSQL</span>
               <span class="skill-item">MySQL</span>
               <span class="skill-item">Redis</span>
+              <span class="skill-item">Pinecone</span>
+              <span class="skill-item">ChromaDB</span>
+              <span class="skill-item">Supabase</span>
+              <span class="skill-item">Mongoose</span>
+              <span class="skill-item">Prisma</span>
+              <span class="skill-item">SQLite</span>
             </div>
           </div>
-          <div class="skill-category">
-            <h3 class="skill-category-title">Tools & Others</h3>
+
+          <div class="skill-category" aria-labelledby="skills-tools">
+            <h3 id="skills-tools" class="skill-category-title">Tools &amp; Others</h3>
             <div class="skill-items">
               <span class="skill-item">Git</span>
+              <span class="skill-item">GitHub Actions (CI/CD)</span>
               <span class="skill-item">Docker</span>
               <span class="skill-item">AWS</span>
-              <span class="skill-item">Jest</span>
-              <span class="skill-item">Webpack</span>
-            </div>
+              <span class="skill-item">Vercel</span>
+              <span class="skill-item">Render</span>
+              <span class="skill-item">Postman</span>
+              <span class="skill-item">Swagger/OpenAPI</span>
           </div>
         </div>
       </div>
